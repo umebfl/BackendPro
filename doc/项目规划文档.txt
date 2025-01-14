@@ -1,0 +1,24 @@
+1. 生成一个nodejs平台的api服务器
+
+技术选择:
+1. nodejs
+2. 后端服务器框架: nestjs
+3. 后端语言: typescript
+4. 认证机制: jwt
+5. 数据库: mongodb
+6. PM2
+7. 版本管理: git
+8. 日志:
+9: api文档自动生成: swagger
+10: 代码格式化: prettire / eslint
+11: typeORM
+12: 错误跟踪: sentry
+13: rate limiting
+14: https
+15: 缓存
+16: 自动化测试
+17: 自动打包
+18: 性能记录及跟踪
+19: 异常报告: zulip
+20: 运行状态报告: zulip
+21: 性能监控、优化和统计分析: @nestjs/terminus + Prometheus + prom-client
