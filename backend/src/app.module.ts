@@ -1,8 +1,9 @@
 import { Module } from '@nestjs/common';
 import { CoreModule } from './core/core.module';
+import { BootstrapModule } from './bootstrap/bootstrap.module';
 
 @Module({
-  imports: [CoreModule],
+  imports: [BootstrapModule, CoreModule],
   controllers: [],
   providers: [],
 })
