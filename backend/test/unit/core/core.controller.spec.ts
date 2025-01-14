@@ -1,6 +1,7 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { CoreController } from '../../../src/core/core.controller';
 import { CoreService } from '../../../src/core/core.service';
+import { setupLogger } from '../../setup/setup';
 
 describe('CoreController', () => {
   let coreController: CoreController;
@@ -14,9 +15,9 @@ describe('CoreController', () => {
           provide: CoreService,
           useValue: {
             getHello: jest.fn(),
-            // Add other service methods here as needed
           },
         },
+        setupLogger(),
       ],
     }).compile();
 
