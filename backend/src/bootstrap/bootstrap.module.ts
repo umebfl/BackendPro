@@ -21,7 +21,6 @@ export class BootstrapModule {
     });
 
     app.enableCors();
-    app.setGlobalPrefix('api');
 
     return app;
   }

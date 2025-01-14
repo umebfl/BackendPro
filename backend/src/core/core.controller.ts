@@ -8,10 +8,17 @@ import { CoreService } from './core.service';
 export class CoreController {
   constructor(private readonly coreService: CoreService) {}
 
-  @Get()
+  @Get('hello')
   @ApiOperation({ summary: 'Get hello message' })
   @ApiResponse({ status: 200, description: 'Returns hello message' })
   getHello(): string {
     return this.coreService.getHello();
+  }
+
+  @Get()
+  @ApiOperation({ summary: 'Get root message' })
+  @ApiResponse({ status: 200, description: 'Returns root message' })
+  getRoot(): string {
+    return 'Welcome to the API';
   }
 }
