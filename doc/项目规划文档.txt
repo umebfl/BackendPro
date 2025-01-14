@@ -1,33 +1,75 @@
-1. 生成一个nodejs平台的api服务器
+1. nestjs
+2. swagger
+3. test
+4. E2E:test
+5. jest test:cov 忽略module.ts以避免影响覆盖率
+6. test 按最佳实践进行拆分
+7. 按功能拆分bootstrap
+8. 提供api请求的日志分析 | 控制日志大小 | 日志记录请求的ip
+9. 项目统一使用路径别名@
 
-技术选择:
-1. nodejs
-2. 后端服务器框架: nestjs
-3. 后端语言: typescript
-4. 认证机制: jwt
-5. 数据库: mongodb
-6. PM2
-7. 版本管理: git
-8. 日志:
-9: api文档自动生成: swagger
-10: 代码格式化: prettire / eslint
-11: typeORM
-12: 错误跟踪: sentry
-13: rate limiting
-14: https
-15: 缓存
-16: 自动化测试
-17: 自动打包
-18: 性能记录及跟踪
-19: 异常报告: zulip
-20: 运行状态报告: zulip
-21: 性能监控、优化和统计分析: @nestjs/terminus + Prometheus + prom-client
+10: 添加jwt认证 签名认证
+11: 
+12: nestjs 性能测试 压力测试
+13: 接入mongodb
+14: 提供日志在线查看和分析
+15: nestjs 添加流量控制和频率控制 | 按ip 和用户 进行区分 | 每分钟最大流量2MB 最大响应120次
+16. nestjs 提供接口返回winston日志流接口
 
 
-1. 要求
-1. 代码应该是让AI容易生成测试的
-2. 代码分块应该是让AI容易读取和分析和修改的
-3. 要求生成可跟踪调试的日志
-4. 自动化测试是首先要考虑的
-5. 拆分模块, 功能分片
 
+关键字
+1: 细粒度拆分
+2: 提供功能说明注释
+3: 功能命名简洁, 语义清晰
+4: 需要提供完善的测试
+
+关键字分类:
+1. 定义/描述
+2. 条件约束/要求
+3. 
+4. 
+
+
+功能描述: 
+功能开发关键附加要求:
+1. 请提供完善的单元测试和e2e测试, 并同步更新相关单元测试和e2e测试
+2. 实现功能时, 对各个功能函数按最佳代码实践进行细粒度拆分, 并提供功能说明注释
+3. 保证功能的准确性和有效性
+4. 功能命名简洁, 语义清晰
+
+
+---
+功能描述: 
+
+实现app注册/删除/查询/修改的功能接口; 
+查询通过appId实现
+修改通过appId实现
+
+接入mongodb
+使用mongoose
+
+app collection包含name: string, active: boolean; comment: string; appId: string; secret: strinbg;
+department: string; ownerId: string; apiScope: string[]; tagsScope: stringp[]; neededUserId: boolean; 
+createdAt: Date; updatedAt: Date;
+
+功能开发关键附加要求:
+1. 请提供完善的单元测试和e2e测试, 并同步更新相关单元测试和e2e测试
+2. 实现功能时, 对各个功能函数按最佳代码实践进行细粒度拆分, 并提供功能说明注释
+3. 保证功能的准确性和有效性
+4. 功能命名简洁, 语义清晰
+5. 导入目录规范, 使用别名导入
+6. 提供完善的日志输出和错误处理
+
+
+功能描述: 
+
+nestjs 支持mongodb mongoose, 实现新增和获取用户接口
+
+功能开发关键附加要求:
+1. 请提供完善的单元测试和e2e测试, 并同步更新相关单元测试和e2e测试
+2. 实现功能时, 对各个功能函数按最佳代码实践进行细粒度拆分, 并提供功能说明注释
+3. 保证功能的准确性和有效性
+4. 功能命名简洁, 语义清晰
+5. 导入目录规范, 使用别名导入
+6. 提供完善的日志输出和错误处理
