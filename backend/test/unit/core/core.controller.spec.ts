@@ -1,6 +1,8 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { CoreController } from '../../../src/core/core.controller';
-import { CoreService } from '../../../src/core/core.service';
+
+import { CoreController } from '@/core/core.controller';
+import { CoreService } from '@/core/core.service';
+
 import { setupLogger } from '../../setup/setup';
 
 describe('CoreController', () => {

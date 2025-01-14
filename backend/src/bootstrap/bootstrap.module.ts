@@ -1,7 +1,8 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { Logger } from '@nestjs/common';
-import { LoggingModule } from '../logging/logging.module';
+
+import { LoggingModule } from '@/logging/logging.module';
 
 @Module({
   imports: [
@@ -15,7 +16,7 @@ import { LoggingModule } from '../logging/logging.module';
 })
 export class BootstrapModule {
   static async createApp() {
-    const { AppModule } = await import('../app.module');
+    const { AppModule } = await import('@/app.module');
     const { NestFactory } = await import('@nestjs/core');
 
     const app = await NestFactory.create(AppModule, {

@@ -1,3 +1,6 @@
 
 
-1. api: http://localhost:3777/api | http://localhost:3777/api-json
+1. api: http://localhost:3777/api | http://localhost:3777/api-json2
+2. 所有更新都要运行全部测试,包括单元测试和E2E测试
+3. 保证整个项目都是AI可控的
+4. 

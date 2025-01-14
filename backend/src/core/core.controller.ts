@@ -3,7 +3,7 @@ import { ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
 import { WINSTON_MODULE_PROVIDER } from 'nest-winston';
 import { Logger } from 'winston';
 
-import { CoreService } from './core.service';
+import { CoreService } from '@/core/core.service';
 
 @ApiTags('Core')
 @Controller()
