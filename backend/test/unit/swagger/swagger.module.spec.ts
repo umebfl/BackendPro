@@ -1,5 +1,5 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { SwaggerConfigModule } from '@/swagger/swagger.module';
+import { SwaggerConfigModule } from '@/utils/swagger/swagger.module';
 import { NestApplication } from '@nestjs/core';
 
 describe('SwaggerConfigModule', () => {
