@@ -1,8 +1,10 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
 
-@Schema({ timestamps: true })
-export class OAuthClient extends Document {
+export type OAuthClientDocument = OAuthClient & Document;
+
+@Schema()
+export class OAuthClient {
   @Prop({ required: true })
   name: string;
 

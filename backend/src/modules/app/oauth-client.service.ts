@@ -1,7 +1,7 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
-import { OAuthClient } from './oauth-client.entity';
+import { OAuthClient, OAuthClientDocument } from './oauth-client.entity';
 import { CreateOAuthClientDto } from './dto/create-oauth-client.dto';
 import { UpdateOAuthClientDto } from './dto/update-oauth-client.dto';
 
@@ -9,7 +9,7 @@ import { UpdateOAuthClientDto } from './dto/update-oauth-client.dto';
 export class OAuthClientService {
   constructor(
     @InjectModel(OAuthClient.name)
-    private readonly oauthClientModel: Model<OAuthClient>,
+    private oauthClientModel: Model<OAuthClientDocument>,
   ) {}
 
   async create(
