@@ -5,6 +5,7 @@ import { CoreModule } from '@/modules/core/core.module';
 import { UserModule } from '@/modules/user/user.module';
 import { SwaggerConfigModule } from '@/utils/swagger/swagger.module';
 import { LoggingModule } from '@/utils/logging/logging.module';
+import { OAuthClientModule } from '@/modules/app/oauth-client.module';
 
 @Module({
   imports: [
@@ -13,6 +14,7 @@ import { LoggingModule } from '@/utils/logging/logging.module';
     CoreModule,
     SwaggerConfigModule,
     UserModule,
+    OAuthClientModule,
   ],
   controllers: [],
   providers: [Logger],
