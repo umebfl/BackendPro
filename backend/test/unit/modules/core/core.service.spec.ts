@@ -1,6 +1,6 @@
 import { Test, TestingModule } from '@nestjs/testing';
 
-import { CoreService } from '../../../src/core/core.service';
+import { CoreService } from '@/modules/core/core.service';
 
 describe('CoreService', () => {
   let service: CoreService;

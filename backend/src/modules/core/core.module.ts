@@ -1,6 +1,7 @@
 import { Module } from '@nestjs/common';
-import { CoreService } from './core.service';
-import { CoreController } from './core.controller';
+
+import { CoreService } from '@/modules/core/core.service';
+import { CoreController } from '@/modules/core/core.controller';
 
 @Module({
   controllers: [CoreController],

@@ -1,8 +1,8 @@
 import { Logger, Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 
-import { CoreModule } from '@/core/core.module';
-import { UserModule } from '@/user/user.module';
+import { CoreModule } from '@/modules/core/core.module';
+import { UserModule } from '@/modules/user/user.module';
 import { SwaggerConfigModule } from '@/utils/swagger/swagger.module';
 import { LoggingModule } from '@/utils/logging/logging.module';
 
